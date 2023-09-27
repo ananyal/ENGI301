@@ -54,7 +54,7 @@ Error conditions:
 
 # NOTE - Add import statements to allow access to Python library functions
 # NOTE - Hint:  Look at  https://docs.python.org/3/library/operator.html
-
+import operator
 # ------------------------------------------------------------------------
 # Constants
 # ------------------------------------------------------------------------
@@ -71,7 +71,11 @@ operators = {
     "+" : operator.add,
     "-" : operator.sub,
     "*" : operator.mul,
-    "/" : operator.truediv
+    "/" : operator.truediv,
+    ">>" : operator.rshift,
+    "<<" : operator.lshift,
+    "%" : operator.mod,
+    "**" : operator.pow
 }
 
 
@@ -91,9 +95,9 @@ def get_user_input():
         # NOTE - Use "pass" statements to allow code to be run without having to 
         # NOTE - fill out the contents.  This pass statement should be removed    
         number1 = float(input("Enter first number: "))
-	    number2 = float(input("Enter second number: "))
-	    op = input("Enter function (valid values are +, -, *, /")
-	f   unc = operators.get(op)
+        number2 = float(input("Enter second number: "))
+        op = input("Enter function (valid values are +, -, *, /, >>, <<, %, **) : ")
+        func = operators.get(op)
         
         # NOTE - User input is generally returned as a string and must be translated.
     except:
