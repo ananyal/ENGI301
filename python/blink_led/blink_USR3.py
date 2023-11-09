@@ -20,7 +20,7 @@ def blink_usr3_led(frequency_hz):
     Args:
         frequency_hz (float): Blink frequency in Hertz.
     """
-    led_pin = "USR3"
+    led_pin = "P2_8"
 
     # Configure GPIO pin for output
     GPIO.setup(led_pin, GPIO.OUT)
